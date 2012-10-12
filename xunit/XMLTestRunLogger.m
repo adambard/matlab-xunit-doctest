@@ -126,6 +126,8 @@ classdef XMLTestRunLogger < TestRunMonitor
             [pathname, filename] = fileparts(self.ReportFile);
             if isempty(filename)
                 filename = fullfile(pathname, ['TEST-' self.CurrentClass '.xml']);
+            else
+                filename = self.ReportFile;
             end
         end
         
